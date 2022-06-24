@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Register a new customer &mdash; Siddhartha Sample Writing  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Register a new RTU" href="Register_an_RTU.html" />
+    <link rel="prev" title="Indices and tables" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Siddhartha Sample Writing
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">API Documentation Sample</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Register a new customer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#http-request">HTTP Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#request-header">Request header</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#example-request">Example Request</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#request-body">Request body</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#body-parameters">Body parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#example-response">Example Response</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#response-parameters">Response parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#status-code">Status code</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Register_an_RTU.html">Register a new RTU</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Siddhartha Sample Writing</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Register a new customer</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Register_a_new_customer.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="register-a-new-customer">
+<h1>Register a new customer<a class="headerlink" href="#register-a-new-customer" title="Permalink to this heading"></a></h1>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 16%" />
+<col style="width: 84%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>POST</p></td>
+<td><p>/v1/customers</p></td>
+</tr>
+</tbody>
+</table>
+<p>This request registers a new customer in Xylem Cloud.</p>
+<p><strong>Prerequisite</strong></p>
+<ol class="arabic">
+<li><p>The application must be created and registered.</p></li>
+<li><p>You must have the following registration key pair values returned from the application registration process:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">serviceId</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">apiKey</span></code></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+<section id="http-request">
+<h2>HTTP Request<a class="headerlink" href="#http-request" title="Permalink to this heading"></a></h2>
+<p><a class="reference external" href="https:/">https:/</a>/{xxxx cloud public address}/xcloud/v1/customers</p>
+</section>
+<section id="request-header">
+<h2>Request header<a class="headerlink" href="#request-header" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>Content-Type = application/json</p></li>
+<li><p>Accept = application/json</p></li>
+<li><p>X-Auth = keycloak</p></li>
+</ul>
+</section>
+<section id="example-request">
+<h2>Example Request<a class="headerlink" href="#example-request" title="Permalink to this heading"></a></h2>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w"> </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;customer1&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;address&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3649 Lady Bug Drive Staten Island, NY 10312&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;customerId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CustomerEast&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;phoneNumber&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;555-966-0696&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;fred@flintstone.com&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ACTIVE&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">  </span><span class="nt">&quot;properties&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;{\&quot;hours\&quot;:\&quot;EST\&quot;}&quot;</span><span class="w"></span>
+<span class="w">  </span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</section>
+<section id="request-body">
+<h2>Request body<a class="headerlink" href="#request-body" title="Permalink to this heading"></a></h2>
+<section id="body-parameters">
+<h3>Body parameters<a class="headerlink" href="#body-parameters" title="Permalink to this heading"></a></h3>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 27%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Datatype</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Name</p>
+<p><em>required</em></p>
+</td>
+<td><p>string</p></td>
+<td><p>The name of the customer</p>
+<p>The name supports the following ASCII characters:</p>
+<ul class="simple">
+<li><p>Alphanumeric characters</p></li>
+<li><p>Spaces</p></li>
+<li><p>Dashes</p></li>
+<li><p>Underscores</p></li>
+<li><p>Periods</p></li>
+</ul>
+<p>Example: <code class="docutils literal notranslate"><span class="pre">EastCoast</span></code></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>address</p>
+<p><em>required</em></p>
+</td>
+<td><p>string</p></td>
+<td><p>The address of the customer</p>
+<p>The address supports all the unicode characters.</p>
+<p>Example: <code class="docutils literal notranslate"><span class="pre">3649</span> <span class="pre">Lady</span> <span class="pre">Bug</span> <span class="pre">Drive</span></code></p>
+</td>
+</tr>
+<tr class="row-even"><td><p>customerId</p>
+<p><em>required</em></p>
+</td>
+<td><p>string</p></td>
+<td><p>The customer ID of the customer that must be associated with the application</p>
+<p>The customerId supports the following ASCII characters:</p>
+<ul class="simple">
+<li><p>Alphanumeric characters</p></li>
+<li><p>Spaces</p></li>
+<li><p>Dashes</p></li>
+<li><p>Underscores</p></li>
+<li><p>Periods</p></li>
+</ul>
+<p>Example: <code class="docutils literal notranslate"><span class="pre">12fr43w667yfeeety644</span></code></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>phoneNumber</p>
+<p><em>required</em></p>
+</td>
+<td><p>string</p></td>
+<td><p>The phone number of the customer</p>
+<p>The phoneNumber supports all the unicode characters.</p>
+<p>Example: <code class="docutils literal notranslate"><span class="pre">555-966-0696</span></code></p>
+</td>
+</tr>
+<tr class="row-even"><td><p>email</p>
+<p><em>optional</em></p>
+</td>
+<td><p>string</p></td>
+<td><p>The email address of the customer</p>
+<p>The email supports all the unicode characters.</p>
+<p>Example: <code class="docutils literal notranslate"><span class="pre">test&#64;xylem.com</span></code></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>status</p>
+<p><em>required</em></p>
+</td>
+<td><p>enum</p></td>
+<td><p>The activation status of the customer in Xylem Cloud</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">ACTIVE</span></code> - Customer is active in Xylem application</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">INACTIVE</span></code> - Customer is inactive in Xylem application</p></li>
+</ul>
+<p>Example: <code class="docutils literal notranslate"><span class="pre">ACTIVE</span></code></p>
+</td>
+</tr>
+<tr class="row-even"><td><p>properties</p>
+<p><em>optional</em></p>
+</td>
+<td><p>object</p></td>
+<td><p>The customer configurable properties</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="example-response">
+<h2>Example Response<a class="headerlink" href="#example-response" title="Permalink to this heading"></a></h2>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
+<span class="w">     </span><span class="nt">&quot;resultMessage&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The customer is registered successfully!&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">     </span><span class="nt">&quot;customerId&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CustomerEast&quot;</span><span class="w"></span>
+<span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+<section id="response-parameters">
+<h3>Response parameters<a class="headerlink" href="#response-parameters" title="Permalink to this heading"></a></h3>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 27%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Name</p></th>
+<th class="head"><p>Datatype</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>resultMessage</p></td>
+<td><p>string</p></td>
+<td><p>Returns the following result message:</p>
+<p><em>The customer is registered successfully!</em></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>customerId</p></td>
+<td><p>string</p></td>
+<td><p>Returns the customer ID of the customer that is successfully added</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="status-code">
+<h2>Status code<a class="headerlink" href="#status-code" title="Permalink to this heading"></a></h2>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 27%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Error Code</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Recovery</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>200</p></td>
+<td><p>The customer is registered successfully!</p></td>
+<td><p>The request was successful.</p></td>
+</tr>
+<tr class="row-odd"><td><p>400</p></td>
+<td><p>Bad Request</p></td>
+<td><p>The input parameters in the request body are either incomplete or in the wrong format.</p></td>
+</tr>
+<tr class="row-even"><td><p>401</p></td>
+<td><p>Unauthorized</p></td>
+<td><p>You are not authorized to make this request. Log in to Xylem Cloud and try again.</p></td>
+</tr>
+<tr class="row-odd"><td><p>500</p></td>
+<td><p>Internal server error</p></td>
+<td><p>Service is currently unavailable. Your request could not be processed. Wait a few minutes and try again.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Indices and tables" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="Register_an_RTU.html" class="btn btn-neutral float-right" title="Register a new RTU" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Siddhartha.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
