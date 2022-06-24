@@ -9,7 +9,21 @@
 
    Register_a_new_customer
    Register_an_RTU
- 
+
+.. toctree::
+   :maxdepth: 2
+   :caption: SDK Documentation Sample
+
+   SDKSample
+
+
+.. toctree::
+   :maxdepth: 2
+   :caption: User Guide Sample
+
+   UserGuide
+
+
 
 Indices and tables
 ==================

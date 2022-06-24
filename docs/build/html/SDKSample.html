@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Getting started &mdash; Siddhartha Sample Writing  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Managing Platforms" href="UserGuide.html" />
+    <link rel="prev" title="Register a new RTU" href="Register_an_RTU.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Siddhartha Sample Writing
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">API Documentation Sample</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Register_a_new_customer.html">Register a new customer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Register_an_RTU.html">Register a new RTU</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SDK Documentation Sample</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#installing-the-sdk">Installing the SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#configuring-the-sdk-environment">Configuring the SDK environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#method-1-sdk-configuration-as-java-object">Method 1: SDK configuration as Java object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#method-2-sdk-configuration-as-properties-file">Method 2: SDK configuration as properties file</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#sync-method">Sync method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="#async-method">Async method</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide Sample</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="UserGuide.html">Managing Platforms</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Siddhartha Sample Writing</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Getting started</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/SDKSample.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="getting-started">
+<h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this heading"></a></h1>
+<p>This guide describes how to integrate the SDK and build an application client that uses the SDK APIs.</p>
+<ol class="arabic">
+<li><p>Create an application client.</p>
+<blockquote>
+<div><p>See the sample application client that uses command line arguments, or the SDK demo examples that are provided in the artifact package.</p>
+</div></blockquote>
+</li>
+<li><p>Install the SDK in the application client.</p></li>
+<li><p>Configure the SDK environment.</p></li>
+<li><p>Use one of the following methods to get the device data:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="#sync-method"><span class="std std-ref">Sync method</span></a></p></li>
+<li><p><a class="reference internal" href="#async-method"><span class="std std-ref">Async method</span></a></p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</section>
+<section id="installing-the-sdk">
+<h1>Installing the SDK<a class="headerlink" href="#installing-the-sdk" title="Permalink to this heading"></a></h1>
+<p>The following steps describe how to prepare your application client that uses the SDK as library.</p>
+<ol class="arabic">
+<li><p>Download the Java SDK package from the given link.</p></li>
+<li><p>Run JAR sign verification tool to verify authenticity and integrity of the Java SDK achieve artifact.</p></li>
+<li><p>Install the SDK to a local or remote Maven repository.</p>
+<ul>
+<li><p>Use Maven install plugin to install the SDK to a local repository.</p>
+<blockquote>
+<div><div class="highlight-XML notranslate"><div class="highlight"><pre><span></span>mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -Dfile=<span class="nt">&lt;path-to-sdk-file&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+<li><p>Use Maven deploy plugin to deploy the SDK to a remote repository.</p>
+<blockquote>
+<div><div class="highlight-XML notranslate"><div class="highlight"><pre><span></span>mvn org.apache.maven.plugins:maven-install-plugin:2.5.2:install-file -Dfile=<span class="nt">&lt;path-to-sdk-file&gt;</span>
+
+mvn deploy:deploy-file -DgroupId=com.xylem.cloud
+   -DartifactId=xylem-cloud-sdk-java
+   -Dversion=<span class="nt">&lt;sdk-version&gt;</span>
+   -Dfile=<span class="nt">&lt;path-to-sdk-file&gt;</span>
+   -Dpackaging=jar
+   -DrepositoryId=<span class="nt">&lt;id-to-map-on-server-section-of-settings.xml&gt;</span>
+   -Durl=<span class="nt">&lt;url-of-the-repository-to-deploy&gt;</span>
+</pre></div>
+</div>
+</div></blockquote>
+</li>
+</ul>
+</li>
+<li><p>Add the Java SDK artifact as a dependency to your application client.</p>
+<p><strong>Maven</strong></p>
+<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span><span class="nt">&lt;dependency&gt;</span>
+<span class="nt">&lt;groupId&gt;</span>com.xylem.cloud<span class="nt">&lt;/groupId&gt;</span>
+<span class="nt">&lt;artifactId&gt;</span>xylem-cloud-sdk-java<span class="nt">&lt;/artifactId&gt;</span>
+<span class="nt">&lt;version&gt;</span>{LatestVersion}<span class="nt">&lt;/version&gt;</span>
+<span class="nt">&lt;/dependency&gt;</span>
+</pre></div>
+</div>
+<p><strong>Gradle</strong></p>
+<div class="highlight-XML notranslate"><div class="highlight"><pre><span></span>repositories {
+mavenCentral()
+}
+dependencies {
+compile &#39;com.xylem.cloud:xylem-cloud-sdk-java:{LatestVersion}&#39;
+}
+</pre></div>
+</div>
+</li>
+</ol>
+</section>
+<section id="configuring-the-sdk-environment">
+<h1>Configuring the SDK environment<a class="headerlink" href="#configuring-the-sdk-environment" title="Permalink to this heading"></a></h1>
+<p>The SDK environment must be configured before creating any API clients by using the SDK. These steps describe how to create an API context with all the secret keys and environmental details. The configured SDK environment allows the API clients to operate.</p>
+<ol class="arabic simple">
+<li><p>Use the methods described in this topic to configure the SDK environment inside the application client.</p></li>
+<li><p>Point your application client to the PRODUCTION API environment.</p></li>
+<li><p>Create Xylem Cloud API clients.</p></li>
+</ol>
+<section id="method-1-sdk-configuration-as-java-object">
+<h2>Method 1: SDK configuration as Java object<a class="headerlink" href="#method-1-sdk-configuration-as-java-object" title="Permalink to this heading"></a></h2>
+<p>Only <code class="docutils literal notranslate"><span class="pre">CLIENTCREDENTIAL</span></code> is supported as <code class="docutils literal notranslate"><span class="pre">AuthenticationScheme</span></code>.</p>
+<blockquote>
+<div><div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Properties</span><span class="p">;</span><span class="w"></span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.xylem.cloud.ApiContext</span><span class="p">;</span><span class="w"></span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.xylem.cloud.clients.OgcApiClient</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// Code omitted for clarity</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
+<span class="c1">// Create Properties object</span><span class="w"></span>
+<span class="c1">// Replace the property parameters with your application service ID, API secret, OIDC secret key, and auth domain</span><span class="w"></span>
+<span class="n">Properties</span><span class="w"> </span><span class="n">properties</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Properties</span><span class="p">();</span><span class="w"></span>
+<span class="n">properties</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;gc.domain&quot;</span><span class="p">,</span><span class="s">&quot;{The domain of the Xylem application}&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">properties</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;app.serviceid&quot;</span><span class="p">,</span><span class="s">&quot;{The service ID of your application}&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">properties</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;app.apikey.secret&quot;</span><span class="p">,</span><span class="s">&quot;{The API secret key}&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">properties</span><span class="p">.</span><span class="na">put</span><span class="p">(</span><span class="s">&quot;app.openid.client.secret&quot;</span><span class="p">,</span><span class="s">&quot;{The OIDC secret key}&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="n">ApiContext</span><span class="w"> </span><span class="n">adminContext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ApiContext</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="w"></span>
+<span class="w">   </span><span class="n">ApiEnvironment</span><span class="p">.</span><span class="na">PRODUCTION</span><span class="p">,</span><span class="w"></span>
+<span class="w">   </span><span class="n">AuthenticationScheme</span><span class="p">.</span><span class="na">CLIENTCREDENTIAL</span><span class="p">,</span><span class="w"></span>
+<span class="w">   </span><span class="k">new</span><span class="w"> </span><span class="n">Configurations</span><span class="p">(</span><span class="n">properties</span><span class="p">));</span><span class="w"></span>
+<span class="n">ClientFactory</span><span class="w"> </span><span class="n">adminClientFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ClientFactory</span><span class="p">();</span><span class="w"></span>
+<span class="n">OgcApiClient</span><span class="w"> </span><span class="n">ogcApiClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">adminClientFactory</span><span class="p">.</span><span class="na">getOgcClient</span><span class="p">(</span><span class="n">adminContext</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+<section id="method-2-sdk-configuration-as-properties-file">
+<h2>Method 2: SDK configuration as properties file<a class="headerlink" href="#method-2-sdk-configuration-as-properties-file" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.xylem.cloud.ApiContext</span><span class="p">;</span><span class="w"></span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.xylem.cloud.clients.OgcApiClient</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// Code omitted for clarity</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
+<span class="n">ApiContext</span><span class="w"> </span><span class="n">adminContext</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ApiContext</span><span class="p">.</span><span class="na">of</span><span class="p">(</span><span class="w"></span>
+<span class="w">   </span><span class="n">ApiEnvironment</span><span class="p">.</span><span class="na">PRODUCTION</span><span class="p">,</span><span class="w"></span>
+<span class="w">   </span><span class="n">AuthenticationScheme</span><span class="p">.</span><span class="na">CLIENTCREDENTIAL</span><span class="p">,</span><span class="w"></span>
+<span class="w">   </span><span class="k">new</span><span class="w"> </span><span class="n">Configurations</span><span class="p">({</span><span class="n">Path</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">property</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">location</span><span class="p">});</span><span class="w"></span>
+<span class="n">ClientFactory</span><span class="w"> </span><span class="n">adminClientFactory</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ClientFactory</span><span class="p">();</span><span class="w"></span>
+<span class="n">adminOgcApiClient</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">adminClientFactory</span><span class="p">.</span><span class="na">getOgcClient</span><span class="p">(</span><span class="n">adminContext</span><span class="p">);</span><span class="w"></span>
+</pre></div>
+</div>
+</div></blockquote>
+<p>The <code class="docutils literal notranslate"><span class="pre">sdkconfig.properties</span></code> file must include the following details:</p>
+<blockquote>
+<div><div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="n">gc</span><span class="p">.</span><span class="na">domain</span><span class="o">=</span><span class="p">{</span><span class="n">The</span><span class="w"> </span><span class="n">domain</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Xylem</span><span class="w"> </span><span class="n">application</span><span class="p">}</span><span class="w"></span>
+<span class="n">app</span><span class="p">.</span><span class="na">serviceid</span><span class="o">=</span><span class="p">{</span><span class="n">The</span><span class="w"> </span><span class="n">service</span><span class="w"> </span><span class="n">ID</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">application</span><span class="p">}</span><span class="w"></span>
+<span class="n">app</span><span class="p">.</span><span class="na">apikey</span><span class="p">.</span><span class="na">secret</span><span class="o">=</span><span class="p">{</span><span class="n">The</span><span class="w"> </span><span class="n">API</span><span class="w"> </span><span class="n">secret</span><span class="w"> </span><span class="n">key</span><span class="p">}</span><span class="w"></span>
+<span class="n">app</span><span class="p">.</span><span class="na">openid</span><span class="p">.</span><span class="na">client</span><span class="p">.</span><span class="na">secret</span><span class="o">=</span><span class="p">{</span><span class="n">The</span><span class="w"> </span><span class="n">OIDC</span><span class="w"> </span><span class="n">secret</span><span class="w"> </span><span class="n">key</span><span class="p">}</span><span class="w"></span>
+</pre></div>
+</div>
+</div></blockquote>
+</section>
+</section>
+<section id="sync-method">
+<span id="id1"></span><h1>Sync method<a class="headerlink" href="#sync-method" title="Permalink to this heading"></a></h1>
+<p>This method returns the observed data of a specific device for less than two weeks. Use Xylem Cloud API clients that are created to request data.</p>
+<p><strong>Define the criteria</strong></p>
+<p>To specify the search criteria, create a criteria object to set the following fields:</p>
+<blockquote>
+<div><div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.xylem.cloud.clients.query.ObsFetchCriteria</span><span class="p">;</span><span class="w"></span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.xylem.cloud.clients.query.ObservationFields</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// Code omitted for clarity</span><span class="w"></span>
+<span class="w"> </span><span class="p">...</span><span class="w"></span>
+<span class="n">ObsFetchCriteria</span><span class="w"> </span><span class="n">criteria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ObsFetchCriteria</span><span class="p">.</span><span class="na">builder</span><span class="p">()</span><span class="w"></span>
+<span class="p">.</span><span class="na">deviceId</span><span class="p">(</span><span class="s">&quot;{DeviceId}&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="p">.</span><span class="na">startDateTimeStamp</span><span class="p">(</span><span class="mi">1577780044L</span><span class="p">)</span><span class="w"></span>
+<span class="p">.</span><span class="na">endDateTimeStamp</span><span class="p">(</span><span class="mi">1578903244L</span><span class="p">)</span><span class="w"></span>
+<span class="p">.</span><span class="na">fields</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">ObservationFields</span><span class="p">.</span><span class="na">customerId</span><span class="p">,</span><span class="n">ObservationFields</span><span class="p">.</span><span class="na">resultTime</span><span class="p">))</span><span class="w"></span>
+<span class="p">.</span><span class="na">observedProperties</span><span class="p">(</span><span class="s">&quot;Arrays.asList(&quot;</span><span class="n">deviceRuntime</span><span class="s">&quot;, &quot;</span><span class="n">relativeEngineLoad</span><span class="s">&quot;)</span>
+<span class="s">.build();</span>
+</pre></div>
+</div>
+</div></blockquote>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 27%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Datatype</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>deviceId</p></td>
+<td><p>long</p></td>
+<td><p>The ID of the device to get the observed data</p></td>
+</tr>
+<tr class="row-odd"><td><p>startDateTimeStamp</p></td>
+<td><p>string</p></td>
+<td><p>The start timestamp and end timestamp for the data extraction</p></td>
+</tr>
+<tr class="row-even"><td><p>endDateTimeStamp</p></td>
+<td><p>long</p></td>
+<td><p>The date range must be for less than two weeks.</p>
+<p>The timestamp must be in the Epoch format.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>ObservationFields</p></td>
+<td><p>enum</p></td>
+<td><p>The following observation fields of your device:</p>
+<ul class="simple">
+<li><p>resultTime</p></li>
+<li><p>featureOfInterestId</p></li>
+<li><p>thingName</p></li>
+<li><p>customerId</p></li>
+<li><p>instanceId</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>ObservationFields</p></td>
+<td><p>string</p></td>
+<td><p>The observation properties of your device</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="async-method">
+<span id="id2"></span><h1>Async method<a class="headerlink" href="#async-method" title="Permalink to this heading"></a></h1>
+<p>These methods return the observed data of a specific device for more than two weeks but less than six months. Use Xylem Cloud API clients to request data.
+The data is returned in the Array data format only.</p>
+<p><strong>Define the search criteria</strong></p>
+<p>To specify the search criteria, create a criteria object to set the following fields:</p>
+<div class="highlight-Java notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">com.xylem.cloud.clients.query.ObsFetchCriteriaAsync</span><span class="p">;</span><span class="w"></span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">com.xylem.cloud.clients.query.ObservationFields</span><span class="p">;</span><span class="w"></span>
+<span class="c1">// Code omitted for clarity</span><span class="w"></span>
+<span class="p">...</span><span class="w"></span>
+<span class="n">ObsFetchCriteriaAsync</span><span class="w"> </span><span class="n">criteria</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ObsFetchCriteriaAsync</span><span class="p">.</span><span class="na">builder</span><span class="p">()</span><span class="w"></span>
+<span class="p">.</span><span class="na">deviceId</span><span class="p">(</span><span class="s">&quot;{DeviceId}&quot;</span><span class="p">)</span><span class="w"></span>
+<span class="p">.</span><span class="na">startDateTimeStamp</span><span class="p">(</span><span class="mi">1577780044L</span><span class="p">)</span><span class="w"></span>
+<span class="p">.</span><span class="na">endDateTimeStamp</span><span class="p">(</span><span class="mi">1584276193L</span><span class="p">)</span><span class="w"></span>
+<span class="p">.</span><span class="na">fields</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="n">ObservationFields</span><span class="p">.</span><span class="na">customerId</span><span class="p">,</span><span class="n">ObservationFields</span><span class="p">.</span><span class="na">resultTime</span><span class="p">))</span><span class="w"></span>
+<span class="p">.</span><span class="na">observedProperties</span><span class="p">(</span><span class="n">Arrays</span><span class="p">.</span><span class="na">asList</span><span class="p">(</span><span class="s">&quot;deviceRuntime&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;relativeEngineLoad&quot;</span><span class="p">))</span><span class="w"></span>
+<span class="p">.</span><span class="na">pageSize</span><span class="p">(</span><span class="mi">2000</span><span class="p">)</span><span class="w"></span>
+<span class="p">.</span><span class="na">build</span><span class="p">();</span><span class="w"></span>
+</pre></div>
+</div>
+<table class="colwidths-given docutils align-default">
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 27%" />
+<col style="width: 55%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Field</p></th>
+<th class="head"><p>Datatype</p></th>
+<th class="head"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>deviceId</p></td>
+<td><p>long</p></td>
+<td><p>The ID of the device to get the observed data</p></td>
+</tr>
+<tr class="row-odd"><td><p>startDateTimeStamp</p></td>
+<td><p>string</p></td>
+<td><p>The start timestamp and end timestamp for the data extraction</p></td>
+</tr>
+<tr class="row-even"><td><p>endDateTimeStamp</p></td>
+<td><p>long</p></td>
+<td><p>The date range must be for less than two weeks.</p>
+<p>The timestamp must be in the Epoch format.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p>ObservationFields</p></td>
+<td><p>enum</p></td>
+<td><p>The following observation fields of your device:</p>
+<ul class="simple">
+<li><p>resultTime</p></li>
+<li><p>featureOfInterestId</p></li>
+<li><p>thingName</p></li>
+<li><p>customerId</p></li>
+<li><p>instanceId</p></li>
+</ul>
+</td>
+</tr>
+<tr class="row-even"><td><p>ObservationFields</p></td>
+<td><p>string</p></td>
+<td><p>The observation properties of your device</p></td>
+</tr>
+<tr class="row-odd"><td><p>pageSize</p></td>
+<td><p>integrate</p></td>
+<td><p>The number of records to include in a page</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Register_an_RTU.html" class="btn btn-neutral float-left" title="Register a new RTU" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="UserGuide.html" class="btn btn-neutral float-right" title="Managing Platforms" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Siddhartha.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

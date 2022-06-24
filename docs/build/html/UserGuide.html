@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Managing Platforms &mdash; Siddhartha Sample Writing  documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Getting started" href="SDKSample.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Siddhartha Sample Writing
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">API Documentation Sample</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="Register_a_new_customer.html">Register a new customer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Register_an_RTU.html">Register a new RTU</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SDK Documentation Sample</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SDKSample.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SDKSample.html#installing-the-sdk">Installing the SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SDKSample.html#configuring-the-sdk-environment">Configuring the SDK environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SDKSample.html#sync-method">Sync method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SDKSample.html#async-method">Async method</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide Sample</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Managing Platforms</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#viewing-the-platform-summary">Viewing the Platform Summary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#managing-power-for-each-platform">Managing Power for Each Platform</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#powering-on-a-platform">Powering On a Platform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#powering-off-a-platform">Powering Off a Platform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#performing-soft-restart-on-a-platform">Performing Soft Restart on a Platform</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#performing-soft-shutdown-on-a-platform">Performing Soft Shutdown on a Platform</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#viewing-the-related-objects-of-a-platform">Viewing the Related Objects of a Platform</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Siddhartha Sample Writing</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Managing Platforms</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/UserGuide.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="managing-platforms">
+<h1>Managing Platforms<a class="headerlink" href="#managing-platforms" title="Permalink to this heading"></a></h1>
+<p>This section provides information about managing a platform using the ClearPath Forward
+vSphere Plug-in user interface in the following topics:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#viewing-the-platform-summary"><span class="std std-ref">Viewing the Platform Summary</span></a></p></li>
+<li><p><a class="reference internal" href="#managing-power-for-each-platform"><span class="std std-ref">Managing Power for Each Platform</span></a></p></li>
+<li><p><a class="reference internal" href="#viewing-the-related-objects-of-a-platform"><span class="std std-ref">Viewing the Related Objects of a Platform</span></a></p></li>
+</ul>
+<section id="viewing-the-platform-summary">
+<span id="id1"></span><h2>Viewing the Platform Summary<a class="headerlink" href="#viewing-the-platform-summary" title="Permalink to this heading"></a></h2>
+<p>To view a platform summary, perform the following:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Expand the <strong>Fabric</strong> list, and click <strong>Platforms.</strong></p>
+<p>The Platforms page appears with the platform details.</p>
+</li>
+<li><p>Select the platform for which you want to view the summary.</p></li>
+<li><p>Click the <strong>Summary</strong> tab.</p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="managing-power-for-each-platform">
+<span id="id2"></span><h2>Managing Power for Each Platform<a class="headerlink" href="#managing-power-for-each-platform" title="Permalink to this heading"></a></h2>
+<p>You can perform various power operations, such as power-on, power-off, soft restart, and
+soft shutdown on an enterprise platform in the ClearPath Forward fabric.</p>
+<p>This section provides information about performing platform power operation in the
+following topics:</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#powering-on-a-platform"><span class="std std-ref">Powering On a Platform</span></a></p></li>
+<li><p><a class="reference internal" href="#powering-off-a-platform"><span class="std std-ref">Powering Off a Platform</span></a></p></li>
+<li><p><a class="reference internal" href="#performing-soft-restart-on-a-platform"><span class="std std-ref">Performing Soft Restart on a Platform</span></a></p></li>
+<li><p><a class="reference internal" href="#performing-soft-shutdown-on-a-platform"><span class="std std-ref">Performing Soft Shutdown on a Platform</span></a></p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>To monitor the operation click Recent Tasks, and then select All Users’ Tasks.</p>
+</div>
+<section id="powering-on-a-platform">
+<span id="id3"></span><h3>Powering On a Platform<a class="headerlink" href="#powering-on-a-platform" title="Permalink to this heading"></a></h3>
+<p>The powering on platform operation is equivalent to pressing the physical power switch.
+This operation can only be performed if the platform is in a powered-off state. This option
+is disabled if the platform is already powered on.</p>
+<p><strong>Prerequisite:</strong> The platform is powered off.</p>
+<p>To power on a platform, perform the following steps:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>On the ClearPath Forward vSphere Plug-in user interface, go to the list of objects, and select the platform that you want to power on.</p></li>
+<li><p>From the <strong>Actions</strong> drop-down menu, click <strong>Power ON.</strong></p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="powering-off-a-platform">
+<span id="id4"></span><h3>Powering Off a Platform<a class="headerlink" href="#powering-off-a-platform" title="Permalink to this heading"></a></h3>
+<p>Powering off is an unorderly shutdown of the platform. This is equivalent to switching off
+the computer by pressing the power button. The platform is turned off without an orderly
+shutdown of its partition images and guest operating systems.</p>
+<p>To power off a platform, perform the following steps:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>On the ClearPath Forward vSphere Plug-in user interface, go to the list of objects and select the platform that you want to power off.</p></li>
+<li><p>From the <strong>Actions</strong> drop-down menu, click <strong>Power OFF.</strong></p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="performing-soft-restart-on-a-platform">
+<span id="id5"></span><h3>Performing Soft Restart on a Platform<a class="headerlink" href="#performing-soft-restart-on-a-platform" title="Permalink to this heading"></a></h3>
+<p>Soft restart is to shutdown of the platform and partitions followed by a restart. Soft restart
+is equivalent to clicking Start and then clicking the Shutdown and Restart options in a
+computer running on the Windows operating system.</p>
+<p>To soft restart a platform, perform the following steps:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>On the ClearPath Forward vSphere Plug-in user interface, go to the list of objects, and select the platform that you want to soft restart.</p></li>
+<li><p>From the <strong>Actions</strong> drop-down menu, click Soft <strong>Restart.</strong></p></li>
+</ol>
+</div></blockquote>
+</section>
+<section id="performing-soft-shutdown-on-a-platform">
+<span id="id6"></span><h3>Performing Soft Shutdown on a Platform<a class="headerlink" href="#performing-soft-shutdown-on-a-platform" title="Permalink to this heading"></a></h3>
+<p>The soft shutdown operation is an orderly shutdown of the platform, and is also known as
+graceful shutdown. Soft shutdown is equivalent to clicking Start and then clicking the
+Shutdown and Ok options in a computer running on the Windows operating system.
+You can shutdown a platform, if it is in a powered-on state.</p>
+<p>To soft shutdown a platform, perform the following steps:</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li><p>On the ClearPath Forward vSphere Plug-in user interface, go to the list of objects, and select the platform that you want to shutdown.</p></li>
+<li><p>From the <strong>Actions</strong> drop-down menu, click Soft <strong>Shutdown.</strong></p></li>
+</ol>
+</div></blockquote>
+</section>
+</section>
+<section id="viewing-the-related-objects-of-a-platform">
+<span id="id7"></span><h2>Viewing the Related Objects of a Platform<a class="headerlink" href="#viewing-the-related-objects-of-a-platform" title="Permalink to this heading"></a></h2>
+<p>To view the related objects of a platform, perform the following steps:</p>
+<blockquote>
+<div><ol class="arabic">
+<li><p>Expand the <strong>Fabric</strong> list, and click <strong>Platforms.</strong></p>
+<p>The Platforms page appears with the platform details.</p>
+</li>
+<li><p>Select the platform for which you want to view the related objects.</p></li>
+<li><p>Click the <strong>Related Objects</strong> tab.</p>
+<p>A list of all the partitions is displayed with the following attributes:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><strong>Partition Name:</strong> Denotes the name of a related partition.</p></li>
+<li><p><strong>Status:</strong> Displays the status of the object.</p></li>
+<li><p><strong>Health:</strong> Displays the health of the object.</p></li>
+<li><p><strong>Type:</strong> Displays the type of the object.</p></li>
+<li><p><strong>Platform Name:</strong> Denotes the name of the platform on which the partition is commissioned.</p></li>
+<li><p><strong>IP Address:</strong> Displays the IP address of the object.</p></li>
+<li><p><strong>Physical Ports:</strong> Displays the physical ports of the partition.</p></li>
+<li><p><strong>Logical Ports:</strong> Displays the logical ports of the partition.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</div></blockquote>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="SDKSample.html" class="btn btn-neutral float-left" title="Getting started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Siddhartha.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
