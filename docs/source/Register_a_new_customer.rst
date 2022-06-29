@@ -168,7 +168,7 @@ Example Response
 .. code-block:: json
 
     {
-         "resultMessage": "The customer is registered successfully!",
+         "resultMessage": "Successful!",
          "customerId": "CustomerEast"
     }
 
@@ -187,7 +187,7 @@ Response parameters
      - string 
      - Returns the following result message:
        
-       *Successfull*
+       *Successful*
 
    * - customerId
      - string
