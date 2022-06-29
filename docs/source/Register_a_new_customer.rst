@@ -3,8 +3,18 @@
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
+
+
 Register a new customer
 #######################
+
+The customer represents a client company or organization that holds authority over a set of devices and related entities in the Xylem Cloud. It has the following functions:
+
+- Provides access to the customers
+
+- Stores and retrieves customer details
+
+- Acts as a database of the customer service instances
 
 +----------------+-------------------------------------------------------------------------------------+
 | POST           |  /v1/customers                                                                      |  
@@ -12,7 +22,7 @@ Register a new customer
 
 This request registers a new customer in Xylem Cloud.
 
-**Prerequisite**
+**Before you begin**
 
 1. The application must be created and registered.
 
@@ -177,7 +187,7 @@ Response parameters
      - string 
      - Returns the following result message:
        
-       *The customer is registered successfully!*
+       *Successfull*
 
    * - customerId
      - string
@@ -196,7 +206,7 @@ Status code
      - Description
      - Recovery
    * - 200
-     - The customer is registered successfully! 
+     - Successful 
      - The request was successful.
    * - 400
      - Bad Request
@@ -204,9 +214,13 @@ Status code
 
    * - 401
      - Unauthorized
-     - You are not authorized to make this request. Log in to Xylem Cloud and try again.
+     - You are not authorized to make this request.
+     
+       Log in to Xylem Cloud and try again.
 
    * - 500
      - Internal server error
-     - Service is currently unavailable. Your request could not be processed. Wait a few minutes and try again. 
+     - Service is currently unavailable. Your request could not be processed.
+       
+       Wait a few minutes and try again. 
 

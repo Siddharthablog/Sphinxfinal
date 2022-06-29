@@ -57,6 +57,18 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="Register_an_RTU.html">Register a new RTU</a></li>
 </ul>
+<p class="caption" role="heading"><span class="caption-text">SDK Documentation Sample</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SDKSample.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SDKSample.html#installing-the-sdk">Installing the SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SDKSample.html#configuring-the-sdk-environment">Configuring the SDK environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SDKSample.html#sync-method">Sync method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SDKSample.html#async-method">Async method</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide Sample</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="UserGuide.html">Managing Platforms</a></li>
+</ul>
 
         </div>
       </div>
@@ -84,6 +96,12 @@
              
   <section id="register-a-new-customer">
 <h1>Register a new customer<a class="headerlink" href="#register-a-new-customer" title="Permalink to this heading"></a></h1>
+<p>The customer represents a client company or organization that holds authority over a set of devices and related entities in the Xylem Cloud. It has the following functions:</p>
+<ul class="simple">
+<li><p>Provides access to the customers</p></li>
+<li><p>Stores and retrieves customer details</p></li>
+<li><p>Acts as a database of the customer service instances</p></li>
+</ul>
 <table class="docutils align-default">
 <colgroup>
 <col style="width: 16%" />
@@ -96,7 +114,7 @@
 </tbody>
 </table>
 <p>This request registers a new customer in Xylem Cloud.</p>
-<p><strong>Prerequisite</strong></p>
+<p><strong>Before you begin</strong></p>
 <ol class="arabic">
 <li><p>The application must be created and registered.</p></li>
 <li><p>You must have the following registration key pair values returned from the application registration process:</p>
@@ -258,7 +276,7 @@
 <tr class="row-even"><td><p>resultMessage</p></td>
 <td><p>string</p></td>
 <td><p>Returns the following result message:</p>
-<p><em>The customer is registered successfully!</em></p>
+<p><em>Successfull</em></p>
 </td>
 </tr>
 <tr class="row-odd"><td><p>customerId</p></td>
@@ -285,7 +303,7 @@
 </thead>
 <tbody>
 <tr class="row-even"><td><p>200</p></td>
-<td><p>The customer is registered successfully!</p></td>
+<td><p>Successful</p></td>
 <td><p>The request was successful.</p></td>
 </tr>
 <tr class="row-odd"><td><p>400</p></td>
@@ -294,11 +312,15 @@
 </tr>
 <tr class="row-even"><td><p>401</p></td>
 <td><p>Unauthorized</p></td>
-<td><p>You are not authorized to make this request. Log in to Xylem Cloud and try again.</p></td>
+<td><p>You are not authorized to make this request.</p>
+<p>Log in to Xylem Cloud and try again.</p>
+</td>
 </tr>
 <tr class="row-odd"><td><p>500</p></td>
 <td><p>Internal server error</p></td>
-<td><p>Service is currently unavailable. Your request could not be processed. Wait a few minutes and try again.</p></td>
+<td><p>Service is currently unavailable. Your request could not be processed.</p>
+<p>Wait a few minutes and try again.</p>
+</td>
 </tr>
 </tbody>
 </table>

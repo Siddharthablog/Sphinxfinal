@@ -19,6 +19,7 @@
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Getting started" href="SDKSample.html" />
     <link rel="prev" title="Register a new customer" href="Register_a_new_customer.html" /> 
 </head>
 
@@ -56,6 +57,18 @@
 <li class="toctree-l2"><a class="reference internal" href="#status-code">Status code</a></li>
 </ul>
 </li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">SDK Documentation Sample</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="SDKSample.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SDKSample.html#installing-the-sdk">Installing the SDK</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SDKSample.html#configuring-the-sdk-environment">Configuring the SDK environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SDKSample.html#sync-method">Sync method</a></li>
+<li class="toctree-l1"><a class="reference internal" href="SDKSample.html#async-method">Async method</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">User Guide Sample</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="UserGuide.html">Managing Platforms</a></li>
 </ul>
 
         </div>
@@ -224,7 +237,7 @@
 <h2>Example Response<a class="headerlink" href="#example-response" title="Permalink to this heading"></a></h2>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
 <span class="w">   </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="nt">&quot;OK&quot;</span><span class="w"></span>
-<span class="w">   </span><span class="nt">&quot;resultMessage&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The device is registered successfully&quot;</span><span class="w"></span>
+<span class="w">   </span><span class="nt">&quot;resultMessage&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Successful&quot;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
@@ -246,7 +259,7 @@
 <tr class="row-even"><td><p>resultMessage</p></td>
 <td><p>string</p></td>
 <td><p>Returns the following result message:</p>
-<p><em>The device is registered successfully!</em></p>
+<p><em>Successful</em></p>
 </td>
 </tr>
 </tbody>
@@ -255,42 +268,38 @@
 </section>
 <section id="status-code">
 <h2>Status code<a class="headerlink" href="#status-code" title="Permalink to this heading"></a></h2>
-<table class="docutils align-default">
+<table class="colwidths-given docutils align-default">
 <colgroup>
 <col style="width: 18%" />
-<col style="width: 82%" />
+<col style="width: 27%" />
+<col style="width: 55%" />
 </colgroup>
-<tbody>
-<tr class="row-odd"><td><p>200</p></td>
-<td><p>The RTU is registered successfully!</p></td>
+<thead>
+<tr class="row-odd"><th class="head"><p>Error Code</p></th>
+<th class="head"><p>Description</p></th>
+<th class="head"><p>Recovery</p></th>
 </tr>
-<tr class="row-even"><td><p>201</p></td>
-<td><p>The RTU is already registered in Xylem Cloud</p>
-<blockquote>
-<div><div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="w"></span>
-<span class="w">   </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;WARNING&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">   </span><span class="nt">&quot;details&quot;</span><span class="p">:</span><span class="w"> </span><span class="nt">&quot;The RTU is already registered in Xylem Cloud&quot;</span><span class="w"></span>
-<span class="w">   </span><span class="nt">&quot;rejectedIds&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;2a3b4dddde3ddddd2233&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="s2">&quot;2a3b4d77de3ddddd2233&quot;</span><span class="w"></span>
-<span class="w">       </span><span class="p">]</span><span class="w"></span>
-<span class="w">  </span><span class="p">}</span><span class="w"></span>
-</pre></div>
-</div>
-</div></blockquote>
-</td>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>200</p></td>
+<td><p>Successful</p></td>
+<td><p>The request was successful.</p></td>
 </tr>
 <tr class="row-odd"><td><p>400</p></td>
-<td><p>Invalid message object</p></td>
+<td><p>Bad Request</p></td>
+<td><p>The input parameters in the request body are either incomplete or in the wrong format.</p></td>
 </tr>
 <tr class="row-even"><td><p>401</p></td>
 <td><p>Unauthorized</p></td>
+<td><p>You are not authorized to make this request.</p>
+<p>Log in to Xylem Cloud and try again.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p>404</p></td>
-<td><p>Not found</p></td>
-</tr>
-<tr class="row-even"><td><p>500</p></td>
+<tr class="row-odd"><td><p>500</p></td>
 <td><p>Internal server error</p></td>
+<td><p>Service is currently unavailable. Your request could not be processed.</p>
+<p>Wait a few minutes and try again.</p>
+</td>
 </tr>
 </tbody>
 </table>
@@ -302,6 +311,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="Register_a_new_customer.html" class="btn btn-neutral float-left" title="Register a new customer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="SDKSample.html" class="btn btn-neutral float-right" title="Getting started" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

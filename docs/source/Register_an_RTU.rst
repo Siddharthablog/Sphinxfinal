@@ -149,7 +149,7 @@ Example Response
 
     {
        "status": "OK"
-       "resultMessage": "The device is registered successfully"
+       "resultMessage": "Successful"
     }
    
 
@@ -168,34 +168,37 @@ Response parameters
      - string 
      - Returns the following result message:
        
-       *The device is registered successfully!*
+       *Successful*
 
 
     
 Status code
 -----------
 
-+----------------+------------------------------------------------------------------------+
-|200             | The RTU is registered successfully!                                    |    
-+----------------+------------------------------------------------------------------------+
-|201             | The RTU is already registered in Xylem Cloud                           |
-|                |                                                                        |            
-|                |  .. code-block:: json                                                  |            
-|                |                                                                        |            
-|                |     {                                                                  |            
-|                |        "status": "WARNING",                                            |            
-|                |        "details": "The RTU is already registered in Xylem Cloud"       |            
-|                |        "rejectedIds": [                                                |            
-|                |         "2a3b4dddde3ddddd2233",                                        |            
-|                |         "2a3b4d77de3ddddd2233"                                         |            
-|                |            ]                                                           |            
-|                |       }                                                                |           
-+----------------+------------------------------------------------------------------------+
-|400             | Invalid message object                                                 |            
-+----------------+------------------------------------------------------------------------+
-|401             | Unauthorized                                                           |            
-+----------------+------------------------------------------------------------------------+
-|404             | Not found                                                              |            
-+----------------+------------------------------------------------------------------------+
-|500             | Internal server error                                                  |            
-+----------------+------------------------------------------------------------------------+
+.. list-table:: 
+   :widths: 20 30 60
+   :header-rows: 1
+
+   * - Error Code
+     - Description
+     - Recovery
+   * - 200
+     - Successful 
+     - The request was successful.
+   * - 400
+     - Bad Request
+     - The input parameters in the request body are either incomplete or in the wrong format.
+
+   * - 401
+     - Unauthorized
+     - You are not authorized to make this request. 
+     
+       Log in to Xylem Cloud and try again.
+
+   * - 500
+     - Internal server error
+     - Service is currently unavailable. Your request could not be processed.
+      
+       Wait a few minutes and try again.
+
+
